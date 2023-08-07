@@ -9,7 +9,7 @@ class VideoSystem {
 public:
 	VideoSystem(string adminUsername, string adminPassword) : admin(adminUsername, adminPassword) {
 		// 默认添加一个管理员，这样其他用户就不能使用admin名称了。
-		m_work.addAdminInfo(adminUsername, adminPassword);
+		//m_work.addAdminInfo(adminUsername, adminPassword);
 	}
 	void StartSystem() {
 		while (true) {
@@ -29,14 +29,14 @@ public:
 				if (choice == 1) {
 
 					// admin login
-					/*
+					
 					string username, password;
 					cout << "请输入管理员用户名：";
 					cin >> username;
 					cout << "请输入管理员密码：";
 					cin >> password;
-					*/
-					string username="admin", password="123456";
+					
+					//string username="admin", password="123456";
 					if (username == admin.getUsername() && password == admin.getPassword()) {
 						m_work.SetCurrentUser(username, password);
 						DoWithAdmin();
@@ -48,14 +48,14 @@ public:
 
 				// 普通用户模块
 				else if (choice == 2) {
-					/*
+					
 					string username, password;
 					cout << "请输入用户名：";
 					cin >> username;
 					cout << "请输入密码：";
 					cin >> password;
-					*/
-					string username = "mrbai", password = "123456";
+					
+					//string username = "mrbai", password = "123";
 					if (m_work.doUserLogin(username, password)) {
 						m_work.SetCurrentUser(username, password);
 						while (true)

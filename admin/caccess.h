@@ -86,7 +86,7 @@ public:
 				}
 			}
 			if(iCount == 0){
-				cout << "尚未有用户访问内容：" << endl;
+				cout << "该用户没有访问内容：" << endl;
 			}
 			cout << endl;
 			cout << endl;

@@ -8,17 +8,19 @@ class Work {
 public:
 
 	Work() {
-		// 默认增加三个栏目
+
 		m_columnManager.AddColumn(new Column("电影"));
 		m_columnManager.AddColumn(new Column("电视剧"));
 		m_columnManager.AddColumn(new Column("短视频"));
 
+		/*
 		// for test
 		m_columnManager.AddColumn(new Column("ni"));
 		m_userManager.addUser(new User("mrbai", "123"));
 		m_ctxManager.AddContent(new	VideoContent("hello1", 1, "ni", 1));
 		m_ctxManager.AddContent(new	VideoContent("hello2", 2, "ni", 0));
 		// end test
+		*/
 
 		m_access.SetManagerInfo(&m_ctxManager, &m_userManager);
 	}
