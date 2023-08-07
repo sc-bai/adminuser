@@ -207,7 +207,7 @@ public:
 	}
 
 private:
-	User*			m_CurrentUser;	// 当前用户
+	User*			m_CurrentUser = nullptr;	// 当前用户
 	UserManager		m_userManager;
 	ContentManager	m_ctxManager;
 	ColumnManager	m_columnManager;
